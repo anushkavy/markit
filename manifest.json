@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "version": "1.1",
+    "name": "Pinpoint",
+    "action": {
+        "default_popup": "./index.html",
+        "default_icon": "./app-icon.png"
+    },
+    "permissions": [
+        "tabs", "storage", "scripting"
+    ],
+    "host_permissions": ["<all_urls>"]
+}

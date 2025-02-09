@@ -1,10 +1,4 @@
 import Anthropic from "@anthropic-ai/sdk";
-import { data } from "./url_data.js";
-
-export function get_details() {
-  const website_data = window.document.body.innerText;
-  return website_data;
-}
 
 const anthropic = new Anthropic({
   apiKey: import.meta.env.VITE_ANTHROPIC_API_KEY,
@@ -17,9 +11,10 @@ export async function summarize_document(
   max_tokens = 1000
 ) {
   const prompt = `Summarize the following information into a title, five relevant tags, and a short description. Keep it concise and informative.
-    Provide the details in an array of length 3. For example:
-    ["title", ["tag 1", "tag 2", "tag 3", "tag 4", "tag 5"], "shortDescription"]
-    Informarition: ${text}`;
+    Provide the details in an array of length 3 in JSON Format. No extra words except this array. For example:
+    [{"title": "<title>"},{"tags": ["tag 1", "tag 2", "tag 3", "tag 4", "tag 5"]},{"shortDescription": "<shortDescription>"}
+]
+    Information: ${text}`;
   const response = await anthropic.messages.create({
     model: model,
     max_tokens: max_tokens,

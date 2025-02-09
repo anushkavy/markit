@@ -1,13 +1,18 @@
-import './App.css'
-import Extension from './extension'
+import { useState } from "react";
+import "./App.css";
+import Extension from "./Components/Extension";
 
 function App() {
+  const [genAiBookmarkInfo, setGenAiBookmarkInfo] = useState("");
 
   return (
     <>
-    <Extension/>
+      <Extension
+        genAiBookmarkInfo={genAiBookmarkInfo}
+        setGenAiBookmarkInfo={setGenAiBookmarkInfo}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
