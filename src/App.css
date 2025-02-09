@@ -1,0 +1,71 @@
+:root{
+  --bg-white: #f0f0f0;
+  --white: #ffffff;
+  --black: #1a1a1a;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Courier Prime", serif;
+}
+
+#root{
+  min-width: 400px;
+  min-height: fit-content;
+  
+}
+
+/* Extension CSS */
+.extension-main{
+  width: 400px;
+  max-height: fit-content;
+  background-color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  padding-bottom: 20px;
+}
+
+.extension-main>header{
+  padding: 20px 10px;
+  background-color:var(--black) ;
+  width: 100%;
+}
+
+.extension-main>header>h3{
+  font-size: 24px;
+  color: var(--white);
+  text-align: center;
+}
+
+.extension-main > form{
+  width: 80%;
+  /* margin: 0 auto; */
+}
+
+.extension-main .link-input{
+  width: 100%;
+  height: 30px;
+  padding: 5px 10px;
+}
+.extension-main .main-btns{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.extension-btn{
+  padding: 7px 14px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid var(--black);
+}
+
+.main-btns .save-btn{
+  background-color: var(--black);
+  color: var(--white);
+}
+
